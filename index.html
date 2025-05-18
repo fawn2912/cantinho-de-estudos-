@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantinho do Estudo</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2a0047;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #1e1e1e;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #c084fc;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .materia {
+      background-color: #2a2a2a;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #c084fc;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .materia h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .materia ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .materia ul li {
+      padding: 0.3rem 0;
+    }
+
+    form {
+      background-color: #1c1c1c;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #c084fc;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input[type="submit"] {
+      background-color: #c084fc;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #a855f7;
+    }
+
+    .upload-area {
+      background-color: #2a2a2a;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .upload-area input {
+      margin-top: 1rem;
+    }
+
+    .upload-area p.success {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      color: #888;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cantinho do Estudo</h1>
+  </header>
+
+  <nav>
+    <a href="#biofisica">Biofísica</a>
+    <a href="#anatomia">Anatomia</a>
+    <a href="#bioquimica">Bioquímica</a>
+    <a href="#saudepublica">Saúde Pública</a>
+    <a href="#fundamentos">Fund. da Fisioterapia</a>
+  </nav>
+
+  <section id="biofisica" class="materia">
+    <h2>Biofísica</h2>
+    <ul>
+      <li><strong>P1:</strong> Conteúdo e PDFs</li>
+      <li><strong>P2:</strong> Conteúdo e PDFs</li>
+    </ul>
+  </section>
+
+  <section id="anatomia" class="materia">
+    <h2>Anatomia</h2>
+    <ul>
+      <li><strong>P1:</strong> Conteúdo e PDFs</li>
+      <li><strong>P2:</strong> Conteúdo e PDFs</li>
+    </ul>
+  </section>
+
+  <section id="bioquimica" class="materia">
+    <h2>Bioquímica</h2>
+    <ul>
+      <li><strong>P1:</strong> Conteúdo e PDFs</li>
+      <li><strong>P2:</strong> Conteúdo e PDFs</li>
+    </ul>
+  </section>
+
+  <section id="saudepublica" class="materia">
+    <h2>Saúde Pública</h2>
+    <ul>
+      <li><strong>P1:</strong> Conteúdo e PDFs</li>
+      <li><strong>P2:</strong> Conteúdo e PDFs</li>
+    </ul>
+  </section>
+
+  <section id="fundamentos" class="materia">
+    <h2>Fundamentos da Fisioterapia</h2>
+    <ul>
+      <li><strong>P1:</strong> Conteúdo e PDFs</li>
+      <li><strong>P2:</strong> Conteúdo e PDFs</li>
+    </ul>
+  </section>
+
+  <div class="upload-area">
+    <h2>Enviar PDF</h2>
+    <p>Você pode escolher um arquivo PDF do seu dispositivo para compartilhar:</p>
+    <input type="file" id="pdfInput" accept="application/pdf" />
+    <p id="uploadStatus"></p>
+  </div>
+
+  <form action="https://formsubmit.co/santoscamile1202@gmail.com" method="POST">
+    <h2>Deixe um comentário</h2>
+    <input type="text" name="name" placeholder="Seu nome" required />
+    <input type="email" name="email" placeholder="Seu e-mail" required />
+    <textarea name="message" rows="4" placeholder="Escreva seu comentário aqui..." required></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="submit" value="Enviar comentário" />
+  </form>
+
+  <footer>
+    © 2025 Cantinho do Estudo – Todos os direitos reservados
+  </footer>
+
+  <!-- JavaScript embutido -->
+  <script>
+    const pdfInput = document.getElementById('pdfInput');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    pdfInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file && file.type === 'application/pdf') {
+        uploadStatus.innerHTML = "✔️ PDF selecionado com sucesso!";
+        uploadStatus.classList.add("success");
+      } else {
+        uploadStatus.innerHTML = "❌ Por favor, selecione um arquivo PDF válido.";
+        this.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
