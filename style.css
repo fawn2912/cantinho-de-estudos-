@@ -1,4 +1,3 @@
-/* Cores roxo e preto com cinza */
 body {
   background: #121212;
   color: #ddd;
@@ -87,6 +86,9 @@ main {
   cursor: pointer;
   transition: background 0.3s;
   word-break: break-word;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .lista-pdfs li:hover {
@@ -97,7 +99,16 @@ main {
 .lista-pdfs li a {
   color: inherit;
   text-decoration: none;
-  display: block;
+  flex-grow: 1;
+}
+
+.lista-pdfs li button {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .comentario-form {
@@ -139,14 +150,13 @@ main {
 }
 
 .comentario-form button:hover {
-  background: #8e6ed7;
+  background: #7e57c2;
 }
 
 footer {
-  margin-top: 40px;
-  padding: 15px;
   text-align: center;
-  background: #2e0854;
-  color: #eee;
-  font-size: 14px;
+  padding: 15px;
+  background: #1b0a36;
+  margin-top: 20px;
+  color: #bbb;
 }
