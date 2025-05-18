@@ -2,92 +2,108 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cantinho do Estudo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Cantinho do Estudo</h1>
+    <p>Envie PDFs e comentários por matéria.</p>
   </header>
 
   <nav>
-    <a href="#biofisica">Biofísica</a>
-    <a href="#anatomia">Anatomia</a>
-    <a href="#bioquimica">Bioquímica</a>
-    <a href="#saudepublica">Saúde Pública</a>
-    <a href="#fundamentos">Fund. da Fisioterapia</a>
+    <button class="tab-btn active" data-materia="biofisica">Biofísica</button>
+    <button class="tab-btn" data-materia="anatomia">Anatomia</button>
+    <button class="tab-btn" data-materia="bioquimica">Bioquímica</button>
+    <button class="tab-btn" data-materia="saudepublica">Saúde Pública</button>
+    <button class="tab-btn" data-materia="fisioterapia">Fundamentos da Fisioterapia</button>
   </nav>
 
   <main>
-    <!-- Biofísica -->
-    <section id="biofisica" class="materia">
+    <section id="biofisica" class="materia ativo">
       <h2>Biofísica</h2>
-      <details>
-        <summary>P1</summary>
-        <input type="file" accept="application/pdf">
-      </details>
-      <details>
-        <summary>P2</summary>
-        <input type="file" accept="application/pdf">
-      </details>
+      <div class="upload-area">
+        <label>Upload de PDF:</label>
+        <input type="file" accept="application/pdf" class="pdf-upload" />
+      </div>
+      <ul class="lista-pdfs"></ul>
+      <form class="comentario-form">
+        <h3>Envie seu comentário</h3>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Seu comentário" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
-    <!-- Anatomia -->
     <section id="anatomia" class="materia">
       <h2>Anatomia</h2>
-      <details>
-        <summary>P1</summary>
-        <input type="file" accept="application/pdf">
-      </details>
-      <details>
-        <summary>P2</summary>
-        <input type="file" accept="application/pdf">
-      </details>
+      <div class="upload-area">
+        <label>Upload de PDF:</label>
+        <input type="file" accept="application/pdf" class="pdf-upload" />
+      </div>
+      <ul class="lista-pdfs"></ul>
+      <form class="comentario-form">
+        <h3>Envie seu comentário</h3>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Seu comentário" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
-    <!-- Bioquímica -->
     <section id="bioquimica" class="materia">
       <h2>Bioquímica</h2>
-      <details>
-        <summary>P1</summary>
-        <input type="file" accept="application/pdf">
-      </details>
-      <details>
-        <summary>P2</summary>
-        <input type="file" accept="application/pdf">
-      </details>
+      <div class="upload-area">
+        <label>Upload de PDF:</label>
+        <input type="file" accept="application/pdf" class="pdf-upload" />
+      </div>
+      <ul class="lista-pdfs"></ul>
+      <form class="comentario-form">
+        <h3>Envie seu comentário</h3>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Seu comentário" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
-    <!-- Saúde Pública -->
     <section id="saudepublica" class="materia">
       <h2>Saúde Pública</h2>
-      <details>
-        <summary>P1</summary>
-        <input type="file" accept="application/pdf">
-      </details>
-      <details>
-        <summary>P2</summary>
-        <input type="file" accept="application/pdf">
-      </details>
+      <div class="upload-area">
+        <label>Upload de PDF:</label>
+        <input type="file" accept="application/pdf" class="pdf-upload" />
+      </div>
+      <ul class="lista-pdfs"></ul>
+      <form class="comentario-form">
+        <h3>Envie seu comentário</h3>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Seu comentário" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
-    <!-- Fundamentos da Fisioterapia -->
-    <section id="fundamentos" class="materia">
+    <section id="fisioterapia" class="materia">
       <h2>Fundamentos da Fisioterapia</h2>
-      <details>
-        <summary>P1</summary>
-        <input type="file" accept="application/pdf">
-      </details>
-      <details>
-        <summary>P2</summary>
-        <input type="file" accept="application/pdf">
-      </details>
+      <div class="upload-area">
+        <label>Upload de PDF:</label>
+        <input type="file" accept="application/pdf" class="pdf-upload" />
+      </div>
+      <ul class="lista-pdfs"></ul>
+      <form class="comentario-form">
+        <h3>Envie seu comentário</h3>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Seu comentário" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    © 2025 Cantinho do Estudo – Todos os direitos reservados
+    <p>© 2025 Cantinho do Estudo</p>
   </footer>
 
   <script src="main.js"></script>
